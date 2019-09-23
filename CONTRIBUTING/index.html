@@ -1,0 +1,689 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="The official documentation for monorepo support for Mkdocs.">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Contributing - mkdocs-monorepo-plugin (beta)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/circular.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#contributing" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs-monorepo-plugin (beta)" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs-monorepo-plugin (beta)
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Contributing
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/spotify/mkdocs-monorepo-plugin/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    spotify/mkdocs-monorepo-plugin
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs-monorepo-plugin (beta)" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs-monorepo-plugin (beta)
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/spotify/mkdocs-monorepo-plugin/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    spotify/mkdocs-monorepo-plugin
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Contributing
+      </label>
+    
+    <a href="./" title="Contributing" class="md-nav__link md-nav__link--active">
+      Contributing
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-from-source" class="md-nav__link">
+    Build from source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolving-the-navigation" class="md-nav__link">
+    Resolving the navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-the-docs-folders" class="md-nav__link">
+    Merging the docs folders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../CODE-OF-CONDUCT/" title="Code of Conduct" class="md-nav__link">
+      Code of Conduct
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://github.com/spotify/mkdocs-monorepo-plugin" title="GitHub Source Code" class="md-nav__link">
+      GitHub Source Code
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-from-source" class="md-nav__link">
+    Build from source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolving-the-navigation" class="md-nav__link">
+    Resolving the navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-the-docs-folders" class="md-nav__link">
+    Merging the docs folders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/spotify/mkdocs-monorepo-plugin/edit/master/docs/CONTRIBUTING.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h1>
+<p>We welcome contributions! We believe that by fostering a healthy, inclusive, and active open source community that we will be able to build better software for all. A large part of that is by having an enforced <a href="../CODE-OF-CONDUCT/">code of conduct</a> as well easy to use contributing guidelines.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Python 3+ or above (with Pip)</li>
+<li><a href="https://mkdocs.org">Mkdocs</a> 1.0.4 or above</li>
+<li>Docker</li>
+<li>Git</li>
+</ul>
+<h2 id="build-from-source">Build from source<a class="headerlink" href="#build-from-source" title="Permanent link">&para;</a></h2>
+<p>This part should be easy. If it's not, let us know! The first thing you'll want to do is import the repository and open up the directory.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git clone git@github.com:spotify/mkdocs-monorepo-plugin.git
+</pre></div>
+</td></tr></table>
+
+<p>Then using the <code>--editable</code> flag, you can install the package locally. This points the actual plugin to the folder which allows you to make changes dynamically without having to re-install it every time you want to test a change.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> mkdocs-monorepo-plugin/
+$ pip install --editable .
+$ pip install -r requirements.txt
+</pre></div>
+</td></tr></table>
+
+<p>Great, now you have the <code>monorepo</code> plugin available in <code>Mkdocs</code>. This allows you to do the following in an <code>mkdocs.yml</code> without errors:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example Site</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">monorepo</span>
+</pre></div>
+</td></tr></table>
+
+<p>Of course, you'll need a folder to test it in. There is a conveniently folder named <code>sample-docs/</code> folder that you can use to test your changes, although you can run <code>mkdocs serve</code> in any project you want as long as the <code>mkdocs.yml</code> has <code>monorepo</code> mentioned in the <code>plugins</code> key.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> sample-docs/
+$ mkdocs serve
+</pre></div>
+</td></tr></table>
+
+<p>Optionally, you can run it using <a href="https://squidfunk.github.io/mkdocs-material/">Mkdocs Material</a> which is what is powering the docs you're currently looking at. It makes Mkdocs really nice to work with. You can then simply pass through <code>--theme</code> to your <code>mkdocs serve</code> command like usual.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip install mkdocs-material
+$ mkdocs serve --theme material
+</pre></div>
+</td></tr></table>
+
+<p>That's pretty much it. Experiment, play about, make the changes you need.</p>
+<h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
+<p>Oh yes, that's worth mentioning! It works quite easily actually. There are two parts to the process: resolving the navigation, and merging the documentation folders.</p>
+<h3 id="resolving-the-navigation">Resolving the navigation<a class="headerlink" href="#resolving-the-navigation" title="Permanent link">&para;</a></h3>
+<p>This is responsible for making sure whenever you use the <code>!include</code> statement in <code>nav</code> inside our <code>mkdocs.yml</code> that we appropriately open up the included file, get the <code>nav</code>, and then appropriately import that into the root <code>nav</code>. So to give you an example:</p>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Source mkdocs.yml files</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># mkdocs.yml</span>
+<span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example Site</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">monorepo</span>
+
+<span class="nt">nav</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Getting Started</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">README.md</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Design</span><span class="p">:</span> <span class="s">&#39;!include</span><span class="nv"> </span><span class="s">teams/design/mkdocs.yml&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Contributing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contributing.md</span>
+
+<span class="c1"># teams/design/mkdocs.yml</span>
+<span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias</span>
+
+<span class="nt">nav</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Menus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">components/menus.md</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Tabs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">components/tabs.md</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Playback Buttons</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">components/playback-buttons.md</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_1" />
+<label for="__tab_1_1">Output mkdocs.yml</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example Site</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">monorepo</span>
+
+<span class="nt">nav</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Getting Started</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">README.md</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Design</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">Menus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias/components/menus.md</span>
+      <span class="p p-Indicator">-</span> <span class="nt">Tabs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias/components/tabs.md</span>
+      <span class="p p-Indicator">-</span> <span class="nt">Playback Buttons</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias/components/playback-buttons.md</span>
+  <span class="p p-Indicator">-</span> <span class="nt">Contributing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contributing.md</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>Note that we've added a <code>design-folder-alias/</code> to the links under Design. This is because when merging the docs in the next step, it is not possible to meaningfully merge them all into a single <code>docs/</code> folder due to the likelihood of conflicts. Due to this, we made a design decision to repurpose the <code>site_name</code> to act as an alias when it is included in a monorepo context and uses this when it tries to create a "single" set of docs by using the alias as a folder.</p>
+<p>The Python code related to this component lives in <code>mkdocs_monorepo_plugin/parser.py</code>.</p>
+<h3 id="merging-the-docs-folders">Merging the docs folders<a class="headerlink" href="#merging-the-docs-folders" title="Permanent link">&para;</a></h3>
+<p>This takes the work the resolver does and applies it to reality. It is responsible for creating a temporary folder using Python's <code>TemporaryFolder()</code> and moves the root <code>docs/</code> folder, as well as the <code>docs/</code> folders of all included paths from the root <code>nav</code>. As mentioned, it also takes their <code>site_name</code> values and uses that to indicate where it should be placed in our "merged" documentation folder.</p>
+<p>The Python code related to this component lives in <code>mkdocs_monorepo_plugin/merger.py</code>.</p>
+<h1 id="making-a-change">Making a change<a class="headerlink" href="#making-a-change" title="Permanent link">&para;</a></h1>
+<p>That's excellent! We're very happy that you'd like to contribute. We are very welcoming to any contributions. It is important to note a few things before you do so:</p>
+<ul>
+<li>
+<p><strong>Consider opening an issue first.</strong> It's easy to fall into the trap to create a bug for something that isn't agreed upon. GitHub issues is a great way to act as a validator for your contribution ideas. We try our best to engage in these as much as possible to make this as painless as possible, as it's easier to write the code than discuss it. It also significantly reduces the chances of us rejecting it.</p>
+</li>
+<li>
+<p><strong>Write tests.</strong> Of course, shipping stuff is pretty cool. Especially when it's a really nice improvement. In this case, there will have many others depending on our source code. It is a small ask for ask you to test your code in a basic capacity, so that it isn't prone to being broken or removed in the future accidentally. Adding complete test coverage is something we will suggest on a case-by-case basis, depending on the type of change it is.</p>
+</li>
+<li>
+<p><strong>Not every contribution will be approved.</strong> Of course, given how much volunteered time you and others spend, it is a great way of saying thank you for to accept and merge every pull request - but in reality, doing so is more harmful than valuable. We want to leverage open source to make software better for everyone rather than for a few. This means considering the long-term value of changes, as well as any impact it may have - will it break existing integrations? will it slow performance? is this a convention others will understand? As a general rule of thumb, we highly encourage you open a GitHub issue first to discuss your ideas. It will help everyone in the long run for just a little bit more time.</p>
+</li>
+</ul>
+<p>That out of the way, here's what you need to do:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">username</span><span class="o">/</span><span class="n">branch-name</span>
+<span class="c1"># ... make your changes</span>
+$ <span class="n">code</span> ./<span class="n">setup</span>.<span class="n">py</span> <span class="c1"># make sure you bump up the version on line 6</span>
+$ <span class="n">git</span> <span class="n">add</span> --<span class="n">patch</span> <span class="c1"># validate your changes</span>
+$ <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &#39;changed X and Y&#39;</span> <span class="c1"># ensure you write a meaningful commit message</span>
+$ <span class="n">git</span> <span class="nb">push</span> -<span class="n">u</span> <span class="n">origin</span> <span class="n">HEAD</span>
+</pre></div>
+</td></tr></table>
+
+<p>It might say you don't have permissions to push to our repository. That's alright, using <a href="https://hub.github.com/hub-fork.1.html">hub fork</a> you can fork the repository on GitHub and then replace the <code>origin</code> remote with your own directly from your Terminal:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">hub</span> <span class="nv">fork</span> <span class="o">--</span><span class="nv">remote</span><span class="o">-</span><span class="nv">name</span> <span class="nv">origin</span>
+$ <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">rm</span> <span class="nv">origin</span>
+$ <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">add</span> <span class="nv">origin</span> <span class="nv">git</span>@<span class="nv">github</span>.<span class="nv">com</span>:[<span class="nv">USERNAME</span>]<span class="o">/</span><span class="nv">mkdocs</span><span class="o">-</span><span class="nv">monorepo</span><span class="o">-</span><span class="nv">plugin</span>.<span class="nv">git</span>
+$ <span class="nv">git</span> <span class="nv">push</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">origin</span> <span class="nv">HEAD</span>
+$ <span class="nv">hub</span> <span class="nv">pull</span><span class="o">-</span><span class="nv">request</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">spotify</span>:<span class="nv">master</span> <span class="o">--</span><span class="nv">message</span> <span class="s1">&#39;</span><span class="s">Pull request title</span><span class="s1">&#39;</span> <span class="o">--</span><span class="nv">browse</span> # <span class="nv">add</span> <span class="o">--</span><span class="nv">draft</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">push</span> <span class="nv">it</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">draft</span> <span class="nv">PR</span>
+</pre></div>
+</td></tr></table>
+
+<p>This will create the pull request in our repository. You can of course do it through GitHub.com or their desktop clients too :)</p>
+<h1 id="running-tests">Running tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h1>
+<p>The command below will use Docker to run our test suites in numerous Python versions. It may take some time on first run, but should be very fast afterwards. When you're done, feel free to run <code>docker prune</code> to clear them from your local cache. We use the <code>slim</code> versions of the public <code>python</code> images from <a href="https://hub.docker.com">Docker Hub</a>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ./__tests__/test-local.sh
+</pre></div>
+</td></tr></table>
+
+<p>For faster tests, you can opt to run in Python 3.7 rather than all supported Python versions:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">PYTHON_37_ONLY</span><span class="o">=</span><span class="m">1</span> ./__tests__/test-local.sh
+</pre></div>
+</td></tr></table>
+
+<p>Alternatively <a href="https://github.com/features/actions">GitHub Actions</a> will execute tests a little faster (due to parallelization) when you push your branch.</p>
+<h1 id="submitting-a-pr">Submitting a PR<a class="headerlink" href="#submitting-a-pr" title="Permanent link">&para;</a></h1>
+<p>Feel free to open up a PR and share why you think this change is valuable (unless it's something obvious, like a typo or confirmed bug). Assuming it is a change that is wanted, a maintainer will take a look to see if there's any changes needed.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../CODE-OF-CONDUCT/" title="Code of Conduct" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Code of Conduct
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Spotify AB
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
