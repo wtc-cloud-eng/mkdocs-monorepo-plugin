@@ -10,7 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="The official documentation for monorepo support for Mkdocs.">
+        <meta name="description" content="The official documentation for the Mkdocs monorepo plugin -- for building multiple documentation in a single Mkdocs.
+">
       
       
       
@@ -38,7 +39,7 @@
     
     
       
-        <title>mkdocs-monorepo-plugin (beta)</title>
+        <title>mkdocs-monorepo-plugin (&beta;)</title>
       
     
     
@@ -90,7 +91,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="mkdocs-monorepo-plugin (beta)" class="md-header-nav__button md-logo">
+        <a href="." title="mkdocs-monorepo-plugin (&beta;)" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -103,7 +104,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              mkdocs-monorepo-plugin (beta)
+              mkdocs-monorepo-plugin (&beta;)
             </span>
             <span class="md-header-nav__topic">
               
@@ -182,12 +183,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="mkdocs-monorepo-plugin (beta)" class="md-nav__button md-logo">
+    <a href="." title="mkdocs-monorepo-plugin (&beta;)" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    mkdocs-monorepo-plugin (beta)
+    mkdocs-monorepo-plugin (&beta;)
   </label>
   
     <div class="md-nav__source">
@@ -245,8 +246,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#philosophy" class="md-nav__link">
-    Philosophy
+  <a href="#features" class="md-nav__link">
+    Features
   </a>
   
 </li>
@@ -261,13 +262,6 @@
         <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caveats-known-design-decisions" class="md-nav__link">
-    Caveats / Known Design Decisions
   </a>
   
 </li>
@@ -308,6 +302,30 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="philosophy/" title="Philosophy" class="md-nav__link">
+      Philosophy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="limitations/" title="Limitations" class="md-nav__link">
+      Limitations
+    </a>
   </li>
 
     
@@ -380,8 +398,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#philosophy" class="md-nav__link">
-    Philosophy
+  <a href="#features" class="md-nav__link">
+    Features
   </a>
   
 </li>
@@ -396,13 +414,6 @@
         <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caveats-known-design-decisions" class="md-nav__link">
-    Caveats / Known Design Decisions
   </a>
   
 </li>
@@ -455,15 +466,30 @@
                 
                 
                 <h1 id="spotifymkdocs-monorepo-plugin">spotify/mkdocs-monorepo-plugin<a class="headerlink" href="#spotifymkdocs-monorepo-plugin" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Not yet stable - use with caution in production</p>
-<p><strong>This plugin is in beta.</strong> Whilst it is not expected to significantly change in functionality, it may not yet be fully compatible with other Mkdocs configuration and thus may break with some advanced configurations. Once these have been resolved and all bugs have been ironed out, we will move this to a stable release.</p>
-</div>
-<p>This plugin adds monorepository support to <a href="https://mkdocs.org">Mkdocs</a>. Specifically, it enables the <code>!include</code> syntax inside <code>nav</code> from your Mkdocs configuration. With this, you can import other <code>mkdocs.yml</code> files and this plugin will intelligently merge them together.</p>
-<h2 id="philosophy">Philosophy<a class="headerlink" href="#philosophy" title="Permanent link">&para;</a></h2>
-<p>This plugin is designed to solve documentation in <strong>large codebases</strong> &mdash; whether monorepos, monoliths or sizeable codebases in general &mdash; by enabling <a href="https://mkdocs.org">Mkdocs</a> to be split out into smaller documentation folders. Then when shipping a change to production, merge the documentation together into a single, digestable site.</p>
-<p>Typically, in these large codebases, there is often complex ownership. Teams may own folders, files, or even parts of a single file. This localizes documentation to the code so it can seamlessly inherit ownership strategies designed for code, such as <a href="https://help.github.com/en/articles/about-code-owners">GitHub Codeowners</a>.</p>
-<p>It was originally designed to improve the documentation process in Spotify's critical software, some which are monoliths with complex ownership across many teams, offices, and continents.</p>
+<p><a href="https://github.com/spotify/mkdocs-monorepo-plugin/actions"><img alt="" src="https://github.com/spotify/mkdocs-monorepo-plugin/workflows/Tests/badge.svg" /></a>
+<a href="https://pypi.org/project/mkdocs-monorepo-plugin/"><img alt="PyPI" src="https://img.shields.io/pypi/v/mkdocs-monorepo-plugin" /></a>
+<img alt="" src="https://img.shields.io/badge/lifecycle-beta-509bf5.svg" />
+<a href="LICENSE"><img alt="PyPI - License" src="https://img.shields.io/pypi/l/mkdocs-monorepo-plugin" /></a></p>
+<blockquote>
+<p><strong>Note: This plugin is in beta.</strong> Whilst it is not expected to significantly change in functionality, it may not yet be fully compatible with other Mkdocs configuration and thus may break with some advanced configurations. Once these have been resolved and all bugs have been ironed out, we will move this to a stable release.✏</p>
+</blockquote>
+<p>✚ This plugin enables you to build multiple sets of documentation in a single Mkdocs. It is designed for large codebases (such as monoliths or monorepos). It was designed to address writing documentation in some of Spotify's largest codebases.</p>
+<p>✏️ <a href="#">Blog Post</a> | 🐍 <a href="https://pypi.org/project/mkdocs-monorepo-plugin/">Python Package</a> | ✚ <a href="https://spotify.github.io/mkdocs-monorepo-plugin/monorepo-example/">Demo</a> | 📕 <a href="https://spotify.github.io/mkdocs-monorepo-plugin/">Docs</a></p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Support for multiple <code>docs/</code> folders in Mkdocs.</strong> Having a single <code>docs/</code> folder in a large codebase is hard to maintain. Who owns which documentation? What code is it associated with? Bringing docs closer to the associated code enables you to update them better, as well as leverage folder-based features such as <a href="https://help.github.com/en/articles/about-code-owners">GitHub Codeowners</a>.</p>
+</li>
+<li>
+<p><strong>Support for multiple navigations.</strong> In Spotify, large repositories typically are split up by multiple owners. These are split by folders. By introducing multiple <code>mkdocs.yml</code> files along with multiple <code>docs/</code> folder, each team can take ownership of their own navigation. This plugin then intelligently merges of the documentation together into a single repository.</p>
+</li>
+<li>
+<p><strong>Support across multiple repositories.</strong> Using <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git Submodules</a> it is possible to merge documentation across multiple repositories into a single codebase dynamically.</p>
+</li>
+<li>
+<p><strong>The same great Mkdocs developer experience.</strong> It is possible to run <code>mkdocs serve</code> in the root to merge all of your documentation together, or in a subfolder to build specific documentation. Autoreload still works as usual. No more using <a href="https://devdojo.com/tutorials/what-is-a-symlink">symlinks</a>!</p>
+</li>
+</ul>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <p>It's easy to get started using <a href="https://pypi.org">PyPI</a> and <code>pip</code> using Python:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip install mkdocs-monorepo-plugin
@@ -488,24 +514,36 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">site_name</span><span class="p">:</span> <span class="s1">&#39;All Docs&#39;</span>
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">site_name</span>: <span class="nv">Cats</span> <span class="nv">API</span>
 
-<span class="c1"># You can declare &quot;!include&quot; statements here. The space between</span>
-<span class="c1"># the statement and the file path is important. Note you cannot</span>
-<span class="c1"># import files that outside the current folder.</span>
-<span class="n">nav</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">Home</span><span class="p">:</span> <span class="n">index</span><span class="o">.</span><span class="n">md</span>
-  <span class="o">-</span> <span class="n">Design</span> <span class="n">Docs</span><span class="p">:</span> <span class="s1">&#39;!include components/design/core/mkdocs.yml&#39;</span>
+# <span class="nv">You</span> <span class="nv">can</span> <span class="nv">declare</span> <span class="s2">&quot;</span><span class="s">!include</span><span class="s2">&quot;</span> <span class="nv">statements</span> <span class="nv">here</span>. <span class="nv">This</span> <span class="nv">enables</span> <span class="nv">you</span>
+# <span class="nv">to</span> <span class="k">include</span> <span class="nv">mkdocs</span>.<span class="nv">yml</span> <span class="nv">that</span> <span class="nv">are</span> <span class="nv">located</span> <span class="nv">in</span> <span class="nv">subfolders</span>. <span class="nv">In</span> <span class="nv">this</span>
+# <span class="nv">case</span> <span class="nv">we</span> <span class="nv">have</span> <span class="nv">two</span> <span class="nv">folders</span> <span class="ss">(</span><span class="nv">v1</span><span class="o">/</span> <span class="nv">and</span> <span class="nv">v2</span><span class="o">/</span><span class="ss">)</span> <span class="nv">and</span> <span class="nv">wish</span> <span class="nv">to</span> <span class="nv">merge</span> <span class="nv">them</span>
+# <span class="nv">into</span> <span class="nv">this</span> <span class="nv">single</span> <span class="nv">navigation</span>. <span class="nv">The</span> <span class="s1">&#39;</span><span class="s">Intro</span><span class="s1">&#39;</span> <span class="nv">and</span> <span class="s1">&#39;</span><span class="s">Authentication</span><span class="s1">&#39;</span>
+# <span class="nv">files</span> <span class="nv">are</span> <span class="nv">located</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">root</span> <span class="nv">docs</span><span class="o">/</span> <span class="nv">folder</span> <span class="nv">as</span> <span class="nv">usual</span>.
 
-<span class="n">plugins</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">monorepo</span>
+<span class="nv">nav</span>:
+  <span class="o">-</span> <span class="nv">Intro</span>: <span class="s1">&#39;</span><span class="s">index.md</span><span class="s1">&#39;</span>
+  <span class="o">-</span> <span class="nv">Authentication</span>: <span class="s1">&#39;</span><span class="s">authentication.md</span><span class="s1">&#39;</span>
+  <span class="o">-</span> <span class="nv">API</span>:
+    <span class="o">-</span> <span class="nv">v1</span>: <span class="s1">&#39;</span><span class="s">!include ./v1/mkdocs.yml</span><span class="s1">&#39;</span>
+    <span class="o">-</span> <span class="nv">v2</span>: <span class="s1">&#39;</span><span class="s">!include ./v2/mkdocs.yml</span><span class="s1">&#39;</span>
+
+<span class="nv">plugins</span>:
+  <span class="o">-</span> <span class="nv">monorepo</span>
 </pre></div>
 </td></tr></table>
 
 </p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Example submodule /src/submodule/mkdocs.yml<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p class="admonition-title">Example submodule /v1/mkdocs.yml<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -518,26 +556,59 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># <span class="nv">In</span> <span class="nv">a</span> <span class="s2">&quot;</span><span class="s">included</span><span class="s2">&quot;</span> <span class="nv">mkdocs</span>.<span class="nv">yml</span>, <span class="nv">we</span> <span class="nv">repurpose</span> <span class="nv">the</span> <span class="nv">use</span> <span class="nv">of</span> <span class="nv">site_name</span>
-# <span class="nv">and</span> <span class="nv">instead</span> <span class="nv">use</span> <span class="nv">it</span> <span class="nv">as</span> <span class="nv">an</span> <span class="nv">alias</span> <span class="k">for</span> <span class="nv">how</span> <span class="nv">we</span> <span class="nv">merge</span> <span class="nv">it</span> <span class="nv">into</span> <span class="nv">the</span>
-# <span class="nv">main</span> <span class="nv">docs</span><span class="o">/</span> <span class="nv">folder</span>. <span class="nv">As</span> <span class="nv">a</span> <span class="nb">result</span> <span class="nv">this</span> <span class="nv">needs</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">a</span> <span class="nv">value</span> <span class="nv">that</span>
-# <span class="nv">is</span> <span class="nv">alphanumeric</span> <span class="nv">and</span> <span class="nv">matches</span> <span class="nv">this</span> <span class="nv">regular</span> <span class="nv">expression</span>: <span class="s1">&#39;</span><span class="s">^[a-zA-Z0-9_\-/]+$</span><span class="s1">&#39;</span>
-# 
-# <span class="nv">In</span> <span class="nv">this</span> <span class="nv">case</span>, <span class="nv">when</span> <span class="nv">running</span> <span class="nv">Mkdocs</span>, <span class="nv">we</span> <span class="nv">will</span> <span class="nv">move</span> <span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">submodule</span><span class="o">/</span><span class="nv">docs</span> <span class="nv">to</span>
-# <span class="nv">a</span> <span class="s2">&quot;</span><span class="s">temporary</span><span class="s2">&quot;</span> <span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">submodule</span><span class="o">-</span><span class="nv">docs</span><span class="o">/</span> <span class="nv">folder</span>. <span class="nv">The</span> <span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">submodule</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">code</span><span class="o">-</span><span class="nv">samples</span>.<span class="nv">md</span>
-# <span class="nv">will</span> <span class="nv">be</span> <span class="nv">located</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">generated</span> <span class="nv">site</span> <span class="nv">at</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">localhost</span>:<span class="mi">8000</span><span class="o">/</span><span class="nv">submodule</span><span class="o">-</span><span class="nv">docs</span><span class="o">/</span><span class="nv">code</span><span class="o">-</span><span class="nv">samples</span><span class="o">/</span>
-#
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">In</span> <span class="n">this</span> <span class="k">case</span><span class="p">,</span> <span class="n">we</span> <span class="n">use</span> <span class="n">the</span> <span class="n">site_name</span> <span class="k">to</span> <span class="n">figure</span> <span class="k">out</span> <span class="n">how</span> <span class="n">we</span> <span class="n">should</span> <span class="n">merge</span>
+<span class="o">#</span> <span class="n">this</span> <span class="k">with</span> <span class="n">the</span> <span class="n">root</span> <span class="n">documentation</span><span class="p">.</span> <span class="n">It</span> <span class="n">should</span> <span class="n">refer</span> <span class="k">to</span> <span class="n">a</span> <span class="n">folder</span> <span class="k">structure</span><span class="p">.</span>
+<span class="o">#</span> <span class="n">The</span> <span class="n">example</span> <span class="n">below</span> <span class="n">will</span> <span class="n">merge</span> <span class="n">documentation</span> <span class="k">as</span> <span class="n">following</span><span class="p">:</span>
+<span class="o">#</span>
+<span class="o">#</span>   <span class="n">reference</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">docs</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">reference</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">reference</span><span class="o">/</span>
+<span class="o">#</span>   <span class="n">changelog</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">docs</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">changelog</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">changelog</span><span class="o">/</span>
+<span class="o">#</span>
 
-<span class="nv">site_name</span>: <span class="nv">submodule</span><span class="o">-</span><span class="nv">docs</span>
+<span class="n">site_name</span><span class="p">:</span> <span class="n">versions</span><span class="o">/</span><span class="n">v1</span>
 
-<span class="nv">nav</span>:
-  <span class="o">-</span> <span class="nv">code</span><span class="o">-</span><span class="nv">samples</span>.<span class="nv">md</span>
+<span class="n">nav</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">Reference</span><span class="p">:</span> <span class="ss">&quot;reference.md&quot;</span>
+  <span class="o">-</span> <span class="n">Changelog</span><span class="p">:</span> <span class="ss">&quot;changelog.md&quot;</span>
+
+<span class="n">nav</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">code</span><span class="o">-</span><span class="n">samples</span><span class="p">.</span><span class="n">md</span>
 </pre></div>
 </td></tr></table>
 
 </p>
 </div>
-<p>An example filetree when using Monorepo support looks like this:</p>
+<div class="admonition info">
+<p class="admonition-title">Example submodule /v2/mkdocs.yml<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">It</span> <span class="n">works</span> <span class="n">the</span> <span class="n">same</span> <span class="k">as</span> <span class="n">above</span><span class="p">,</span> <span class="n">but</span> <span class="k">with</span> <span class="k">relative</span> <span class="k">to</span> <span class="n">the</span> <span class="n">site_name</span> <span class="n">we</span> <span class="n">use</span> <span class="n">here</span><span class="p">:</span>
+<span class="o">#</span>
+<span class="o">#</span>   <span class="n">migrating</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">docs</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">migrating</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">migrating</span><span class="o">/</span>
+<span class="o">#</span>   <span class="n">reference</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">docs</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">reference</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">reference</span><span class="o">/</span>
+<span class="o">#</span>   <span class="n">changelog</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">docs</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">changelog</span><span class="p">.</span><span class="n">md</span> <span class="o">-&gt;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">v2</span><span class="o">/</span><span class="n">changelog</span><span class="o">/</span>
+
+<span class="n">site_name</span><span class="p">:</span> <span class="n">versions</span><span class="o">/</span><span class="n">v2</span>
+
+<span class="n">nav</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">Migrating</span> <span class="k">to</span> <span class="n">v2</span><span class="p">:</span> <span class="ss">&quot;migrating.md&quot;</span>
+  <span class="o">-</span> <span class="n">Reference</span><span class="p">:</span> <span class="ss">&quot;reference.md&quot;</span>
+  <span class="o">-</span> <span class="n">Changelog</span><span class="p">:</span> <span class="ss">&quot;changelog.md&quot;</span>
+</pre></div>
+</td></tr></table>
+
+</p>
+</div>
+<p>An example filetree when using the Mkdocs Monorepo plugin looks like this:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -548,26 +619,36 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">$</span> <span class="n">tree</span> <span class="p">.</span>
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tree .
 
-<span class="err">├──</span> <span class="n">docs</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="k">index</span><span class="p">.</span><span class="n">md</span>
-<span class="err">├──</span> <span class="n">mkdocs</span><span class="p">.</span><span class="n">yml</span>
-<span class="err">└──</span> <span class="n">module</span>
-    <span class="err">├──</span> <span class="n">docs</span>
-    <span class="err">│</span>   <span class="err">└──</span> <span class="k">index</span><span class="p">.</span><span class="n">md</span>
-    <span class="err">└──</span> <span class="n">mkdocs</span><span class="p">.</span><span class="n">yml</span>
+├── docs
+│   ├── authentication.md
+│   └── index.md
+├── mkdocs.yml
+├── v1
+│   ├── docs
+│   │   ├── changelog.md
+│   │   └── reference.md
+│   └── mkdocs.yml
+└── v2
+    ├── docs
+    │   ├── changelog.md
+    │   ├── migrating.md
+    │   └── reference.md
+    └── mkdocs.yml
 
-<span class="mi">3</span> <span class="n">directories</span><span class="p">,</span> <span class="mi">4</span> <span class="n">files</span>
+<span class="m">5</span> directories, <span class="m">10</span> files
 </pre></div>
 </td></tr></table>
 
-<h2 id="caveats-known-design-decisions">Caveats / Known Design Decisions<a class="headerlink" href="#caveats-known-design-decisions" title="Permanent link">&para;</a></h2>
-<ul>
-<li>In an included <code>mkdocs.yml</code>, you cannot have <code>!include</code>. It is only supported in the root <code>mkdocs.yml</code></li>
-<li>In an included <code>mkdocs.yml</code>, your <code>site_name</code> follow the regular expression: <code>^[a-zA-Z0-9_\-/]+$</code></li>
-<li>In an included <code>mkdocs.yml</code>, it currently looks for the relative <code>docs/</code> folder and does not respect the <code>docs_dir</code> value.</li>
-</ul>
 <h2 id="supported-versions">Supported Versions<a class="headerlink" href="#supported-versions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Python 3 &mdash; 3.5, 3.6, 3.7</li>
@@ -604,13 +685,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="CONTRIBUTING/" title="Contributing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="philosophy/" title="Philosophy" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Contributing
+                Philosophy
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
