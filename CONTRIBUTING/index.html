@@ -35,7 +35,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -43,17 +43,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -609,11 +609,11 @@ $ <span class="n">git</span> <span class="nb">push</span> -<span class="n">u</sp
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">hub</span> <span class="nv">fork</span> <span class="o">--</span><span class="nv">remote</span><span class="o">-</span><span class="nv">name</span> <span class="nv">origin</span>
-$ <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">rm</span> <span class="nv">origin</span>
-$ <span class="nv">git</span> <span class="nv">remote</span> <span class="nv">add</span> <span class="nv">origin</span> <span class="nv">git</span>@<span class="nv">github</span>.<span class="nv">com</span>:[<span class="nv">USERNAME</span>]<span class="o">/</span><span class="nv">mkdocs</span><span class="o">-</span><span class="nv">monorepo</span><span class="o">-</span><span class="nv">plugin</span>.<span class="nv">git</span>
-$ <span class="nv">git</span> <span class="nv">push</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">origin</span> <span class="nv">HEAD</span>
-$ <span class="nv">hub</span> <span class="nv">pull</span><span class="o">-</span><span class="nv">request</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">spotify</span>:<span class="nv">master</span> <span class="o">--</span><span class="nv">message</span> <span class="s1">&#39;</span><span class="s">Pull request title</span><span class="s1">&#39;</span> <span class="o">--</span><span class="nv">browse</span> # <span class="nv">add</span> <span class="o">--</span><span class="nv">draft</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">push</span> <span class="nv">it</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">draft</span> <span class="nv">PR</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span><span class="w"> </span><span class="n">hub</span><span class="w"> </span><span class="n">fork</span><span class="w"> </span><span class="c1">--remote-name origin</span>
+<span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="n">origin</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="o">[</span><span class="n">USERNAME</span><span class="o">]/</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">monorepo</span><span class="o">-</span><span class="n">plugin</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">HEAD</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">hub</span><span class="w"> </span><span class="n">pull</span><span class="o">-</span><span class="n">request</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="nl">spotify</span><span class="p">:</span><span class="n">master</span><span class="w"> </span><span class="c1">--message &#39;Pull request title&#39; --browse # add --draft if you want to push it as a draft PR</span>
 </pre></div>
 </td></tr></table>
 
@@ -634,6 +634,7 @@ $ <span class="nv">hub</span> <span class="nv">pull</span><span class="o">-</spa
 <p>Feel free to open up a PR and share why you think this change is valuable (unless it's something obvious, like a typo or confirmed bug). Assuming it is a change that is wanted, a maintainer will take a look to see if there's any changes needed.</p>
                 
                   
+                
                 
               
               
@@ -705,7 +706,7 @@ $ <span class="nv">hub</span> <span class="nv">pull</span><span class="o">-</spa
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
