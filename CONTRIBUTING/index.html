@@ -14,7 +14,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.7">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.b8ac9624.min.css">
       
       
     
@@ -281,13 +281,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#merging-the-docs-folders" class="md-nav__link">
-    Merging the docs folders
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -390,13 +383,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#merging-the-docs-folders" class="md-nav__link">
-    Merging the docs folders
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -464,40 +450,35 @@ $ mkdocs serve --theme material
 <p>Oh yes, that's worth mentioning! It works quite easily actually. There are two parts to the process: resolving the navigation, and merging the documentation folders.</p>
 <h3 id="resolving-the-navigation">Resolving the navigation<a class="headerlink" href="#resolving-the-navigation" title="Permanent link">&para;</a></h3>
 <p>This is responsible for making sure whenever you use the <code>!include</code> statement in <code>nav</code> inside our <code>mkdocs.yml</code> that we appropriately open up the included file, get the <code>nav</code>, and then appropriately import that into the root <code>nav</code>. So to give you an example:</p>
-<div class="tabbed-set" data-tabs="1:2">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Source mkdocs.yml files</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="c1"># mkdocs.yml</span>
-<span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example Site</span>
+<p>```yaml tab="Source mkdocs.yml files"</p>
+<h1 id="mkdocsyml">mkdocs.yml<a class="headerlink" href="#mkdocsyml" title="Permanent link">&para;</a></h1>
+<p>site_name: Example Site</p>
+<p>plugins:
+  - monorepo</p>
+<p>nav:
+  - Getting Started: README.md
+  - Design: '!include teams/design/mkdocs.yml'
+  - Contributing: contributing.md</p>
+<h1 id="teamsdesignmkdocsyml">teams/design/mkdocs.yml<a class="headerlink" href="#teamsdesignmkdocsyml" title="Permanent link">&para;</a></h1>
+<p>site_name: design-folder-alias</p>
+<p>nav:
+  - Menus: components/menus.md
+  - Tabs: components/tabs.md
+  - Playback Buttons: components/playback-buttons.md
+<div class="highlight"><pre><span></span><code>```yaml tab=&quot;Output mkdocs.yml&quot;
+site_name: Example Site
 
-<span class="nt">plugins</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">monorepo</span>
+plugins:
+  - monorepo
 
-<span class="nt">nav</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Getting Started</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">README.md</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Design</span><span class="p">:</span> <span class="s">&#39;!include</span><span class="nv"> </span><span class="s">teams/design/mkdocs.yml&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Contributing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contributing.md</span>
-
-<span class="c1"># teams/design/mkdocs.yml</span>
-<span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias</span>
-
-<span class="nt">nav</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Menus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">components/menus.md</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Tabs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">components/tabs.md</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Playback Buttons</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">components/playback-buttons.md</span>
-</code></pre></div></div>
-<input name="__tabbed_1" type="radio" id="__tabbed_1_2" /><label for="__tabbed_1_2">Output mkdocs.yml</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example Site</span>
-
-<span class="nt">plugins</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">monorepo</span>
-
-<span class="nt">nav</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Getting Started</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">README.md</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Design</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">Menus</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias/components/menus.md</span>
-      <span class="p p-Indicator">-</span> <span class="nt">Tabs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias/components/tabs.md</span>
-      <span class="p p-Indicator">-</span> <span class="nt">Playback Buttons</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">design-folder-alias/components/playback-buttons.md</span>
-  <span class="p p-Indicator">-</span> <span class="nt">Contributing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">contributing.md</span>
-</code></pre></div></div>
-</div>
+nav:
+  - Getting Started: README.md
+  - Design:
+      - Menus: design-folder-alias/components/menus.md
+      - Tabs: design-folder-alias/components/tabs.md
+      - Playback Buttons: design-folder-alias/components/playback-buttons.md
+  - Contributing: contributing.md
+</code></pre></div></p>
 <p>Note that we've added a <code>design-folder-alias/</code> to the links under Design. This is because when merging the docs in the next step, it is not possible to meaningfully merge them all into a single <code>docs/</code> folder due to the likelihood of conflicts. Due to this, we made a design decision to repurpose the <code>site_name</code> to act as an alias when it is included in a monorepo context and uses this when it tries to create a "single" set of docs by using the alias as a folder.</p>
 <p>The Python code related to this component lives in <code>mkdocs_monorepo_plugin/parser.py</code>.</p>
 <h3 id="merging-the-docs-folders">Merging the docs folders<a class="headerlink" href="#merging-the-docs-folders" title="Permanent link">&para;</a></h3>
@@ -616,15 +597,15 @@ $ hub pull-request -b spotify:master --message &#39;Pull request title&#39; --br
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

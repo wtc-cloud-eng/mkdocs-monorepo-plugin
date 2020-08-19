@@ -10,16 +10,16 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.7">
     
     
       
-        <title>Authentication - Cats API</title>
+        <title>Migrating to v2 - Cats API</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.b8ac9624.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.b8ac9624.min.css">
       
       
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#authentication" class="md-skip">
+        <a href="#migration-guide-to-v2" class="md-skip">
           Skip to content
         </a>
       
@@ -60,7 +60,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="Cats API" class="md-header-nav__button md-logo" aria-label="Cats API">
+    <a href="../../.." title="Cats API" class="md-header-nav__button md-logo" aria-label="Cats API">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Authentication
+              Migrating to v2
             
           </span>
         </div>
@@ -104,7 +104,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Cats API" class="md-nav__button md-logo" aria-label="Cats API">
+    <a href="../../.." title="Cats API" class="md-nav__button md-logo" aria-label="Cats API">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -121,7 +121,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Intro" class="md-nav__link">
+    <a href="../../.." title="Intro" class="md-nav__link">
       Intro
     </a>
   </li>
@@ -131,53 +131,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Authentication
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Authentication" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../authentication/" title="Authentication" class="md-nav__link">
       Authentication
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authorization-header" class="md-nav__link">
-    Authorization Header
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -185,10 +143,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       API
@@ -237,7 +197,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../versions/v1/reference/" title="Reference" class="md-nav__link">
+    <a href="../../v1/reference/" title="Reference" class="md-nav__link">
       Reference
     </a>
   </li>
@@ -249,7 +209,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../versions/v1/changelog/" title="Changelog" class="md-nav__link">
+    <a href="../../v1/changelog/" title="Changelog" class="md-nav__link">
       Changelog
     </a>
   </li>
@@ -264,10 +224,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
     
     <label class="md-nav__link" for="nav-3-2">
       v2
@@ -289,11 +251,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../versions/v2/migrating/" title="Migrating to v2" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Migrating to v2" class="md-nav__link md-nav__link--active">
       Migrating to v2
     </a>
+    
   </li>
 
         
@@ -303,7 +274,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../versions/v2/reference/" title="Reference" class="md-nav__link">
+    <a href="../reference/" title="Reference" class="md-nav__link">
       Reference
     </a>
   </li>
@@ -315,7 +286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../versions/v2/changelog/" title="Changelog" class="md-nav__link">
+    <a href="../changelog/" title="Changelog" class="md-nav__link">
       Changelog
     </a>
   </li>
@@ -348,23 +319,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#authorization-header" class="md-nav__link">
-    Authorization Header
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -379,13 +333,11 @@
                   
                 
                 
-                <h1 id="authentication">Authentication</h1>
-<p>This explains how to authenticate.</p>
-<h2 id="authorization-header">Authorization Header</h2>
-<p>To authenticate, simply pass in your access token in the form of a <code>Authorization: Bearer {access_token}</code> header in your HTTP request to our API.</p>
+                <h1 id="migration-guide-to-v2">Migration Guide to v2</h1>
+<p>This contains the migration guide to the v2 API from the v1 API.</p>
 <ul>
-<li>Markdown source: <code>sample-docs/docs/authentication.md</code></li>
-<li>Permalink: <a href="https://spotify.github.io/mkdocs-monorepo-plugin/monorepo-example/authentication/">https://spotify.github.io/mkdocs-monorepo-plugin/monorepo-example/authentication/</a></li>
+<li>Markdown source: <code>sample-docs/v2/docs/migrating.md</code></li>
+<li>Permalink: <a href="https://spotify.github.io/mkdocs-monorepo-plugin/monorepo-example/versions/v2/migrating/">https://spotify.github.io/mkdocs-monorepo-plugin/monorepo-example/versions/v2/migrating/</a></li>
 </ul>
                 
               
@@ -405,7 +357,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="Intro" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../v1/changelog/" title="Changelog" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -414,13 +366,13 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Intro
+                Changelog
               </div>
             </div>
           </a>
         
         
-          <a href="../versions/v1/reference/" title="Reference" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../reference/" title="Reference" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -453,15 +405,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d1f5a259.min.js"></script>
-      <script src="../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "..",
+          base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
+            worker: "../../../assets/javascripts/worker/search.fae956e7.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
